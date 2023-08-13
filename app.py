@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/api/endpoint', methods=['GET'])
+@app.route('/', methods=['GET'])
 def api_endpoint():
     # Process the request and call the actual API
     # Return the response to Google Apps Script
