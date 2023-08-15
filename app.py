@@ -31,7 +31,7 @@ def display_message():
     return render_template('home.html', message=message)
 
 
-@app.route('/receive_frm_line', methods=['GET'])
+@app.route('/receive_frm_line', methods=['POST'])
 def receive_message():
     data = request.get_json()
     line_msg = data.get('message')
