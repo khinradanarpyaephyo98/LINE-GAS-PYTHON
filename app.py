@@ -1,11 +1,11 @@
-from flask import Flask, render_template,request
+from flask import Flask, render_template,request,jsonify
+
 app = Flask(__name__)
  
 @app.route('/',methods=['GET'])
 def home():
-   print("linwwe")
-   message="limb"
-   return render_template('home.html',message=message)
+   return render_template('home.html')
+   
 
 @app.route('/result',methods=['POST','GET'])
 def result():
@@ -16,8 +16,11 @@ def result():
 
 @app.route('/line',methods=['GET'])
 def line():
-   print("line")
-   return render_template('home.html')
+   data = {
+        'message': 'This is the message from the API route!'
+    }
+   return jsonify(data)
+   
 
 if __name__ == '__main__':
    app.run()
