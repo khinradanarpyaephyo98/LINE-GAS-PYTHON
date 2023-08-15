@@ -35,7 +35,7 @@ def display_message():
 def receive_message():
     data = request.get_json()
     line_msg = data.get('message')
-    
+    print(line_msg,"line msg ")
     return render_template('home.html', line_msg=line_msg)
 
 
