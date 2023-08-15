@@ -1,9 +1,11 @@
 from flask import Flask, render_template,request
 app = Flask(__name__)
  
-@app.route('/')
+@app.route('/',methods=['GET'])
 def home():
-   return render_template('home.html')
+   print("linwwe")
+   message="limb"
+   return render_template('home.html',message=message)
 
 @app.route('/result',methods=['POST','GET'])
 def result():
