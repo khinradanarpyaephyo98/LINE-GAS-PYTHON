@@ -10,6 +10,11 @@ def result():
    output = request.form.to_dict()
    question = output["question"]
    print(question)
+   return render_template('home.html',message=question)
+
+@app.route('/line',methods=['GET'])
+def line():
+   print("line")
    return render_template('home.html')
 
 if __name__ == '__main__':
