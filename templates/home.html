@@ -7,20 +7,23 @@
 </head>
 <body>
     <h1>Welcome to the HomePage , This is test!</h1>
-    <h1>{{question}}</h1>
+    <h3>{{question}}</h3>
     {{line_msg}}
-    {{mo}}
     
     
-    <form class="grid" action="/result" method="POST">
+    <form class="grid" action="/reply" method="POST">
         <label for="Questions"> Enter the Questions</label>
         <input type="text" name="question" id="question">
         <input type="Submit" class="file_submit">
 
     </form>
+    <!--
     <form class="getMsgFromLine" action="/line" method="GET">
         <button> Get FROM LINE app    ,,,, </button>
     </form>
+    -->
+    <p> The answer is {{answer}}</p>
+
     
 </body>
 </html>

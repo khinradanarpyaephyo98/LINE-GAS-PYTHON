@@ -2,3 +2,6 @@ Flask
 Frozen-Flask
 huggingface_hub
 sentence_transformers
+pypdf
+langchain
+faiss-cpu
