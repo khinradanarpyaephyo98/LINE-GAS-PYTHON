@@ -1,3 +1,4 @@
 Flask
 Frozen-Flask
 huggingface_hub
+sentence_transformers
