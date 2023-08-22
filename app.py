@@ -17,8 +17,6 @@ for file in os.listdir('docs'):
       documents.extend(loader.load())
 
 print("Number of documents :",len(documents))
-print(documents)
-
 
 text_splitter = CharacterTextSplitter(chunk_size=500, chunk_overlap=10)
 documents = text_splitter.split_documents(documents)
@@ -62,7 +60,7 @@ def result():
    return render_template('home.html',answer=answer2,question=query)
 
 
-@app.route('/check_reply',methods=['GET'])
+@app.route('/check_reply',methods=['GET','POST'])
 def check_reply():
    data = {
         'answer1': answer1
@@ -70,7 +68,7 @@ def check_reply():
    return jsonify(data)
 
 
-@app.route('/check_result',methods=['GET'])
+@app.route('/check_result',methods=['GET','POST'])
 def check_result():
    data = {
         'answer2': answer2
